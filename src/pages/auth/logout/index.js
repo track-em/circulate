@@ -5,7 +5,7 @@ import styles from "@/styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Logout() {
     return (
         <>
             <h1>Test SignUp</h1>
