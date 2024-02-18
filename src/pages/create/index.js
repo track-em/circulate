@@ -17,7 +17,7 @@ export default function Create() {
                     </div>
                 </Grid>
                 <Grid item xs={6} display="flex" justifyContent="center" alignItems="center" sx={{pb:2}}>
-                    <ActionCard cardDetail={'Create a group'} icon="createGroupIcon.png" redirectURI="dashboard"/>
+                    <ActionCard cardDetail={'Create a group'} icon="createGroupIcon.png" redirectURI="form"/>
                 </Grid>
                 <Grid item xs={6} display="flex" justifyContent="center" alignItems="center" sx={{pb:2}}>
                 
