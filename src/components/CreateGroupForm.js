@@ -7,6 +7,11 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { Grid, Typography } from '@mui/material';
+import CurrencyPoundIcon from '@mui/icons-material/CurrencyPound';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormLabel from '@mui/material/FormLabel';
 
 export default function CreateGroupForm() {
     const [state, setState] = useState({ email: '', password: '', role: '', remenberMe: false });
@@ -23,58 +28,89 @@ export default function CreateGroupForm() {
     return (
         <form noValidate
             autoComplete="off"
-            onSubmit={handleSubmit}>
+            onSubmit={handleSubmit} sx={{ m: "10%" }}>
 
-            <TextField id="email"
-                label="Email"
-                variant="outlined"
-                type="email"
-                value={state.email}
-                onChange={(e) => handleChange('email', e.target.value)}
-                className="mb-16" />
+            <Grid container spacing={2} sx={{ m: '5%' }}>
+                <Grid item xs={4}>
+                    <Typography variant="h6" gutterBottom sx={{ color: '#012A4A', textAlign: "right" }}>
+                        Max Number of participants: </Typography>
 
-            <TextField id="password"
-                label="Password"
-                variant="outlined"
-                type="password"
-                value={state.password}
-                onChange={(e) => handleChange('password', e.target.value)}
-                className="mb-16" />
+                </Grid>
+                <Grid item xs={8}>
+                    <TextField type="text" size='small' defaultValue="Small" />
 
-            <FormControl variant="outlined" className="mb-16">
-                <InputLabel id="role">Role</InputLabel>
+                </Grid>
+                <Grid item xs={4}>
+                    <Typography variant="h6" gutterBottom sx={{ color: '#012A4A', textAlign: "right" }}>
+                        Maximum contribution amount: </Typography>
 
-                <Select
-                    labelId="role"
-                    id="role"
-                    value={state.role}
-                    onChange={(e) => handleChange('role', e.target.value)}>
+                </Grid>
+                <Grid item xs={6} sx={{
+                    color: '#012A4A', display: 'flex',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                }}>
+                    <TextField type="text" size='small' defaultValue="Small" />
+                    <CurrencyPoundIcon />
 
-                    <MenuItem value=""><em>None</em></MenuItem>
-                    <MenuItem value="ADMIN">Admin</MenuItem>
-                    <MenuItem value="VISITOR">Monitor</MenuItem>
-                    <MenuItem value="SALES">Sales</MenuItem>
-                </Select>
-            </FormControl>
+                </Grid>
 
-            <FormControlLabel
-                control={
-                    <Checkbox
-                        checked={state.remenberMe}
-                        onChange={(e) => handleChange('remenberMe', e.target.checked)}
-                        value={true}
-                        color="primary"
+                <Grid item xs={4}>
+                    <Typography variant="h6" gutterBottom sx={{ color: '#012A4A', textAlign: "right" }}>
+                        Minimum contribution amount: </Typography>
+
+                </Grid>
+                <Grid item xs={8} sx={{
+                    color: '#012A4A', display: 'flex',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                }}>
+                    <TextField type="text" size='small' defaultValue="Small" />
+                    <CurrencyPoundIcon />
+                </Grid>
+
+                <Grid item xs={4}>
+                    <Typography variant="h6" gutterBottom sx={{ color: '#012A4A', textAlign: "right" }}>
+                        Group Type </Typography>
+
+                </Grid>
+                <Grid item xs={8}>
+                    <RadioGroup
+                        row
+                        aria-labelledby="demo-row-radio-buttons-group-label"
+                        name="row-radio-buttons-group"
+                    >
+                        <FormControlLabel value="open" control={<Radio />} label="Open" />
+                        <FormControlLabel value="closed" control={<Radio />} label="Closed" />
+
+                    </RadioGroup>
+                </Grid>
+                <Grid item xs={4}>
+                    <Typography variant="h6" gutterBottom sx={{ color: '#012A4A', textAlign: "right" }}>
+                        Group Email List: </Typography>
+
+                </Grid>
+                <Grid item xs={6}>
+                    <TextField
+                        id="filled-multiline-static"
+                        label="Multiline"
+                        multiline
+                        rows={4}
+                        defaultValue="Default Value"
+                        variant="filled"
                     />
-                }
-                label="Remeber me"
-                className="mb-16" />
+                </Grid>
 
-            <Button variant="contained"
-                color="primary"
-                type="submit">
-                Register
-            </Button>
-
+                <Grid item xs={10} display="flex" justifyContent="center" alignItems="center">
+                    <Button variant="contained"
+                        color="primary"
+                        type="submit"
+                    >
+                        Submit
+                    </Button>
+                </Grid>
+            </Grid>
+            
         </form>
     );
 }
