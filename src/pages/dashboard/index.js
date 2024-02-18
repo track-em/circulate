@@ -12,11 +12,12 @@ import Image from '@mui/icons-material/Image';
 import Button from '@mui/joy/Button';
 import Link from '@mui/material/Link';
 // import { Typography } from '@mui/material';
-import AspectRatio from '@mui/joy/AspectRatio';
 import Card from '@mui/joy/Card';
-import Skeleton from '@mui/joy/Skeleton';
 import Typography from '@mui/joy/Typography';
 import mockdata from "../api/mockdata.json"
+import Chip from '@mui/material/Chip';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
 import CardContent from '@mui/joy/CardContent';
 
@@ -95,6 +96,20 @@ export default function Home() {
                             </Typography>
                             <Typography textColor="inherit" sx={{ pl: 2 }} ><b>Max participants: </b>{activeGroup.max_participants}</Typography>
                             <Typography textColor="inherit" sx={{ pl: 2, pb: 2 }}><b>Min Contribution: </b>{activeGroup.min_contribution}</Typography>
+                            <Typography textColor="inherit" sx={{ pl: 2, pb: 2 }}><b>Term Length: </b>{activeGroup.term_length}</Typography>
+                            <Typography textColor="inherit" sx={{ pl: 2, pb: 2 }}> {activeGroup.visibility ? <Chip label="Public" color="primary" /> : <Chip label="Private" color="secondary" />}</Typography>
+                            {/* <Typography textColor="inherit" sx={{ pl: 2, pb: 2 }}>Active participants:
+                                <List>
+                                    {activeGroup.participants ?
+                                        activeGroup.participants.map((item, index) => {
+                                            return (<ListItem>
+                                                <ListItemText
+                                                    primary={item}
+                                                />
+                                            </ListItem>)
+                                        })
+
+                                        : <div>Loading...</div>}</List></Typography> */}
                         </CardContent>
                     </Card>
 
