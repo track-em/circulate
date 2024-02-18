@@ -6,12 +6,16 @@ import IconButton from '@mui/material/IconButton';
 import { Image } from 'mui-image'
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-export default function ActionCard({ cardDetail, icon }) {
+
+export default function ActionCard({ cardDetail, icon, redirectURI }) {
+    const router = useRouter()
+
     return (
-        <div>
-        <Card   sx={{ width: 500, maxWidth:600,  border: "1px solid #A9D6E5",  boxShadow: "1px 1px 1px 1px #A9D6E5"}}>
-            <CardActionArea  sx={{ minHeight:150}}>
+        <Card sx={{ width: 500, maxWidth:600,  border: "1px solid #A9D6E5",  boxShadow: "1px 1px 1px 1px #A9D6E5"}}>
+            <CardActionArea  sx={{ minHeight:150}} onClick={() => router.push(redirectURI)}>
                 <CardContent>
 
                     <Grid item xs={12} display="flex" justifyContent="center" alignItems="center">
@@ -39,6 +43,5 @@ export default function ActionCard({ cardDetail, icon }) {
                 </CardContent>
             </CardActionArea>
         </Card>
-        </div>
     );
 }
