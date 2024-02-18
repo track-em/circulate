@@ -1,39 +1,165 @@
 {
-    "data": [
+  "data": [
+    {
+      "name": "dream-team",
+      "max_participants": 3,
+      "min_contribution": "$50",
+      "participants": [
         {
-            "name": "dream-team",
-            "max_participants": 3,
-            "min_contribution": "$50",
-            "participants": [
-                {
-                    "name": "Abdi",
-                    "score": "8.7"
-                },
-                {
-                    "name": "Jama",
-                    "score": "9.7"
-                },
-                {
-                    "name": "Zaki",
-                    "score": "8.9"
-                }
-            ]
+          "name": "Abdi",
+          "score": "8.7"
         },
         {
-            "name": "somali-chaps",
-            "max_participants": 10,
-            "min_contribution": "$150",
-            "status": "closed",
-            "participants": [
-                {
-                    "name": "Abdi",
-                    "score": "8.7"
-                },
-                {
-                    "name": "Ahmed",
-                    "score": "7.7"
-                }
-            ]
+          "name": "Jama",
+          "score": "9.7"
+        },
+        {
+          "name": "Zaki",
+          "score": "8.9"
         }
-    ]
+      ],
+      "group_policy": [
+        {
+          "rules": [
+            "Regular communication is essential for maintaining trust and coordination within the group. Participants should actively engage in discussions and provide updates on their progress or any challenges they may face.",
+            "Decisions within the group should be made collectively, with input from all members. Consensus-building and respectful dialogue are encouraged to ensure that everyone's perspectives are considered."
+          ]
+        }
+      ],
+
+      "visibility": true,
+      "due_date": "2024-04-08",
+      "term_length": 24
+    },
+
+    {
+      "name": "lacag",
+      "max_participants": 10,
+      "min_contribution": "$50",
+
+      "participants": [
+        { "name": "Yusuf", "score": "8.5" },
+        { "name": "Aisha", "score": "9.1" },
+        { "name": "Ali", "score": "8.9" },
+        { "name": "Fatima", "score": "8.7" },
+        { "name": "Ahmed", "score": "9.0" },
+        { "name": "Zahra", "score": "8.8" },
+        { "name": "Omar", "score": "8.6" },
+        { "name": "Khadija", "score": "9.2" },
+        { "name": "Mohammed", "score": "8.9" },
+        { "name": "Safiya", "score": "8.4" }
+      ],
+
+      "group_policy": [
+        {
+          "rules": [
+            "Financial responsibility is paramount. Participants are expected to make timely contributions according to the agreed schedule to uphold the group's financial stability and meet its objectives.",
+            "Transparency in financial matters is crucial. All transactions and expenditures should be documented and shared with the group to foster accountability and trust."
+          ]
+        }
+      ],
+      "visibility": false,
+      "due_date": "2024-04-12",
+      "term_length": 24
+    },
+
+    {
+      "name": "amazing-family",
+      "max_participants": 8,
+      "min_contribution": "$50",
+
+      "participants": [
+        { "name": "Fatimah", "score": "8.3" },
+        { "name": "Ibrahim", "score": "9.0" },
+        { "name": "Zainab", "score": "8.6" },
+        { "name": "Hassan", "score": "8.8" },
+        { "name": "Mariam", "score": "9.1" },
+        { "name": "Mustafa", "score": "8.7" },
+        { "name": "Amina", "score": "8.5" },
+        { "name": "Hamza", "score": "8.9" }
+      ],
+
+      "group_policy": [
+        {
+          "rules": [
+            "Ethical conduct is non-negotiable. Members should adhere to a code of ethics that promotes integrity, honesty, and fairness in all interactions and decisions.",
+            "Any conflicts or disputes should be resolved through open dialogue and mediation, with a focus on finding mutually acceptable solutions and preserving relationships."
+          ]
+        }
+      ],
+      "visibility": true,
+      "due_date": "2024-04-15",
+      "term_length": 36
+    },
+
+    {
+      "name": "Comeup",
+      "max_participants": 9,
+      "min_contribution": "$50",
+      "participants": [
+        {
+          "name": "Abby",
+          "score": "8.9"
+        },
+        {
+          "name": "Jamal",
+          "score": "9.6"
+        },
+        {
+          "name": "Zack",
+          "score": "8.8"
+        }
+      ],
+      "group_policy": [
+        {
+          "rules": [
+            "Supporting each other extends beyond financial contributions. Members should actively seek opportunities to assist and uplift fellow participants, whether through mentorship, networking, or emotional support.",
+            "Creating a culture of inclusivity and diversity is important. Discrimination or harassment of any kind will not be tolerated, and steps should be taken to ensure that all voices are heard and valued."
+          ]
+        }
+      ],
+      "visibility": false,
+      "due_date": "2024-02-24",
+      "term_length": 24
+    },
+
+    {
+      "name": "Mali-money",
+      "max_participants": 5,
+      "min_contribution": "$100",
+      "participants": [
+        {
+          "name": "Hibo",
+          "score": "8.8"
+        },
+        {
+          "name": "Ali",
+          "score": "9.1"
+        },
+        {
+          "name": "Zackery",
+          "score": "8.6"
+        },
+        {
+          "name": "Zackery",
+          "score": "8.6"
+        },
+        {
+          "name": "Mo",
+          "score": "6.6"
+        }
+      ],
+      "group_policy": [
+        {
+          "rules": [
+            "Flexibility and adaptability are key in navigating challenges. Participants should be willing to adjust plans or strategies as needed to accommodate changing circumstances and maximize the group's effectiveness.",
+            "Celebrating achievements and milestones fosters morale and cohesion. Recognizing and appreciating the contributions of individual members contributes to a positive group dynamic and motivates continued collaboration."
+          ]
+        }
+      ],
+      "visibility": false,
+      "due_date": "2024-02-28",
+      "term_length": 60
+    }
+  ]
 }
