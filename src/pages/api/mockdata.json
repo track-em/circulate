@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "name": "dream-team",
+            "max_participants": 3,
+            "min_contribution": "$50",
+            "participants": [
+                {
+                    "name": "Abdi",
+                    "score": "8.7"
+                },
+                {
+                    "name": "Jama",
+                    "score": "9.7"
+                },
+                {
+                    "name": "Zaki",
+                    "score": "8.9"
+                }
+            ]
+        },
+        {
+            "name": "somali-chaps",
+            "max_participants": 10,
+            "min_contribution": "$150",
+            "status": "closed",
+            "participants": [
+                {
+                    "name": "Abdi",
+                    "score": "8.7"
+                },
+                {
+                    "name": "Ahmed",
+                    "score": "7.7"
+                }
+            ]
+        }
+    ]
+}
